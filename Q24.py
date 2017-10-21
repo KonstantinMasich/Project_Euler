@@ -8,7 +8,7 @@
 import math
 
 def first_digit(l, target_num):
-    """Gets list and target permutation num, returns 1st digit of perm."""
+    """Gets list and target permutation num, returns index of the 1st digit of perm."""
     index = target_num/math.factorial(len(l)-1)
     return int(index)
 
@@ -24,8 +24,8 @@ while (n-1)>=0:
     res.append(x)
     # 2. Changing data:
     T = int(T - row * math.factorial(n-1))
-    l.remove(x) # Working list
-    n = len(l)  # Working list size
+    l.remove(x) # Remove digit from working list
+    n = len(l)  # Update working list size
     
 # 3. Result is:
 print (''.join(str(x) for x in res))
