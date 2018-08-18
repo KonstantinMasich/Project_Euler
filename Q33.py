@@ -23,7 +23,7 @@ for b in range(11, 99+1):
     for a in range(10, b):
         common_digit = set(str(a)).intersection(set(str(b)))
         # If a and b have 1 common digit and a, b are not multiple of 10:
-        if len(common_digit) == 1 and 1%10!=0 and b%10!=0:
+        if len(common_digit) == 1 and a%10!=0 and b%10!=0:
             old_frac = a / b
             # 1. We 'simplify' the fraction illegally:
             new_a = [int(el) for el in str(a)]
